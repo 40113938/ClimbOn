@@ -1,0 +1,155 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
+
+
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Climbing Skills</title>
+</head>
+<body>
+
+{#menu bar#}
+{#<div class="menu-bar">#}
+<ul>
+    <li><a href="/index">Home</a> </li>
+    <li><a href="/index/profile">Profile</a></li>
+    <li><a href="about.html">About</a></li>
+</ul>
+{#</div>#}
+
+
+
+                <h3> Basic Climbing Skills </h3>
+
+
+
+
+                <div class="lesson-start">
+                <h2> When bouldering, be careful of those below! <br>
+                    This is the same for walking around, watch for those above
+                    <br> [add in a looping animation/video or something</h2>
+                    <br>
+                </div>
+
+{#Slider#}
+
+<script>
+    // Call & init
+$(document).ready(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    // Adjust the slider
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+    // Bind dragging events
+    drags(cur.find('.handle'), cur.find('.resize'), cur);
+  });
+});
+
+// Update sliders on resize.
+
+$(window).resize(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+  });
+});
+
+function drags(dragElement, resizeElement, container) {
+
+  // Initialize the dragging event on mousedown.
+  dragElement.on('mousedown touchstart', function(e) {
+
+    dragElement.addClass('draggable');
+    resizeElement.addClass('resizable');
+
+    // Check if it's a mouse or touch event and pass along the correct value
+    var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+    // Get the initial position
+    var dragWidth = dragElement.outerWidth(),
+        posX = dragElement.offset().left + dragWidth - startX,
+        containerOffset = container.offset().left,
+        containerWidth = container.outerWidth();
+
+    // Set limits
+    minLeft = containerOffset + 10;
+    maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+    // Calculate the dragging distance on mousemove.
+    dragElement.parents().on("mousemove touchmove", function(e) {
+
+      // Check if it's a mouse or touch event and pass along the correct value
+      var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+      leftValue = moveX + posX - dragWidth;
+
+      // Prevent going off limits
+      if ( leftValue < minLeft) {
+        leftValue = minLeft;
+      } else if (leftValue > maxLeft) {
+        leftValue = maxLeft;
+      }
+
+      // Translate the handle's left value to masked divs width.
+      widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+
+      // Set the new values for the slider and the handle.
+      // Bind mouseup events to stop dragging.
+      $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+        $(this).removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+      $('.resizable').css('width', widthValue);
+    }).on('mouseup touchend touchcancel', function(){
+      dragElement.removeClass('draggable');
+      resizeElement.removeClass('resizable');
+    });
+    e.preventDefault();
+  }).on('mouseup touchend touchcancel', function(e){
+    dragElement.removeClass('draggable');
+    resizeElement.removeClass('resizable');
+  });
+}
+
+
+
+</script>
+
+<div class="ba-slider">
+  <img src="/static/1.jpg" alt="">
+  <div class="resize">
+    <img src="/static/2.jpg" alt="">
+  </div>
+  <span class="handle"></span>
+</div>
+
+{#End of slider#}
+
+
+
+
+
+                </div class="lesson-start">
+                <h2> Click the next button to finish and return to homepage!</h2>
+                </div>
+
+                <a href="/index" class="button">Next!</a>
+
+
+<div class="progress">
+    <div class="progress-bar" style="width:40%">60%</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+<html>
+
+{#Menu Bar#}
+<ul>
+    <li><a class="active" href="index.html">Home</a> </li>
+    <li><a href="/index/profile">Profile</a></li>
+    <li><a href="about.html">About</a></li>
+</ul>
+{#Menu Bar#}
+
+
+        <div class="login-screen">
+            <div class="app-title">
+                <h1> Send It </h1>
+
+            </div>
+
+            <div class="gallery">
+      <figure class="gallery-item">
+          <a href="/index/climbingskillsstart">
+        <img class="thumbnail" src="./static/topropeprogress1.JPG">
+              <h2> Basic Climbing Skills, Hello {{ session['username'] }}</h2>
+{#              Session stuff doesn't really work. Though this finally displays something#}
+
+              </a>
+      </figure>
+      <figure class="gallery-item">
+        <img class="thumbnail" src="./static/2.JPG">
+      </figure>
+
+            </div>
+        </div>
+
+
+
+</html>
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<head>
+  <title>ClimbOn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{#  <link rel="stylesheet" type="text/css" href="static/reset.css">#}
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="page-title">
+      <div class="logo"></div>
+      <h1>Send It</h1>
+
+    </div>
+  </header>
+
+
+  <!---- Testing Area --->
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right; margin-right: 2rem;">Login</button>
+
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto; float: right; margin-right: 0.5rem;">Register</button>
+<!-- Login Modal -->
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/index" method="POST">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../static/avatarimage1.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+
+      <label for="username"><b>Username</b></label>
+      <input id="username" type="text" placeholder="Enter Username" value="" name="username">
+
+      <label for="username"><b>Password</b></label>
+      <input id="password" type="password" placeholder="Enter Password" value="" name="password">
+
+      <button type="submit" value="Log In">Login</button>
+      <!---<label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label> -->
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+<!-- Register Modal -->
+<div id="id02" class="modal">
+<form class="modal-content animate" action="/action_page.php" method="post">
+
+
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../static/avatarimage2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+
+        {% include 'registration.html' %}
+
+
+		<label for="REGemail"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email">
+
+      <label for="REGuname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname">
+
+      <label for="REGpsw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw">
+
+      <button type="submit">Register</button>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+
+    </div>
+  </form>
+
+</div>
+
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+  <!--- end of testing area --->
+
+  <div id="menubar">
+
+
+  </div>
+
+
+
+
+
+
+  <div class="main">
+    <p class="page-description clearfix">
+      Send It is a service to help start your development of climbing. You can learn all the basic skills and then use them!
+      <a class="learn-more" href="#">Learn More >></a>
+    </p>
+    <div class="gallery">
+      <figure class="gallery-item">
+        <img class="thumbnail" src="./static/1.JPG">
+      </figure>
+      <figure class="gallery-item">
+        <img class="thumbnail" src="./static/2.JPG">
+      </figure>
+
+    </div>
+  </div>
+
+    <div class="contact-btn">
+      <a>CONTACT US</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,565 @@
+html,
+body {
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Calibri", sans-serif;
+  /*font-size: 18px;*/
+  line-height: 1.4em;
+  color: Black;
+}
+
+body {
+  background: url("../static/mountain.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#menubar {
+	margin-right: 2rem;
+}
+
+
+
+/* Testing area */
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+buttonsquare{
+     background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* End of Testing Area */
+
+
+/* Title and Description */
+
+.page-title {
+  text-align: center;
+  margin: auto;
+  line-height: 2em;
+}
+
+.signin {
+	text-align: right;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  background-image: url("../static/errorharness.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  top: 1em;
+}
+
+.page-title h1 {
+  display: inline-block;
+}
+
+.main {
+  text-align: center;
+}
+
+.page-description {
+  font-size: 1rem;
+  padding: 30px;
+}
+
+.learn-more {
+  color: DarkOrange;
+  text-decoration: none;
+  display: block;
+  margin: 25px 0 0 0;
+  font-weight: bold;
+}
+
+/* Gallery */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  margin: 20px;
+}
+
+.gallery-item .thumbnail {
+  width: 450px;
+  border: 2px solid GhostWhite;
+  border-radius: 4px;
+}
+/*Sizing issue is fixed above but isn't showing on site*/
+
+/* Footer Navigation */
+
+nav {
+  margin-top: 30px;
+}
+
+nav ul {
+  display: block;
+}
+
+nav li {
+  display: inline;
+  margin: 0 20px 0 0;
+  color: GhostWhite;
+}
+
+nav a {
+  line-height: 60px;
+  border: 1px solid GhostWhite;
+  padding: 7px;
+  border-radius: 4px;
+  color: DarkOrange;
+  text-decoration: none;
+}
+
+.contact-btn {
+  cursor: pointer;
+  margin: 20px 30px;
+  text-align: center;
+}
+
+.contact-btn a:active {
+  position: relative;
+  bottom: 2px;
+}
+
+
+
+ /*lessons */
+
+.lesson-start{
+    margin-top: 20px;
+    text-align: center;
+
+    /*font-size: 2.5em;*/
+    /*Font size doesn't work for some reason*/
+}
+
+h2{
+    font-size: 1.5rem;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.climbingskillsimages{
+    margin: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 70%;
+    box-shadow: 0 4px 8px 0, 0 6px 20px 0;
+}
+/*menu bar*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #111;
+}
+.active {
+    background-color: #4CAF50;
+}
+
+/*Button*/
+.button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  .page-title{
+    width: 270px;
+
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px), (orientation: portrait) {
+  .gallery-item .thumbnail{
+    width: 95%;
+  }
+}
+
+@media only screen and (min-resolution: 150dpi){
+  .logo {
+  background-image: url("../static/errorharness.jpg");
+  }
+}
+
+@media only screen and (max-resolution: 150dpi) and (max-width: 480px){
+  .page-description{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+  .page-title, .page-description{
+    float: left;
+    width: 20em;
+  }
+  .page-description{
+    text-align: left;
+  }
+
+}
+
+
+/*Testing*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+
+
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text - this is for the gallery on climbingskills2 */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.alert .alert-success{
+
+}
+
+
+/*Climbing Skills 2 Gallery*/
+
+/*Slider*/
+
+.ba-slider {
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.ba-slider img {
+    width: 100%;
+    display:block;
+}
+
+.resize {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+.handle { /* Thin line seperator */
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:4px;
+  margin-left:-2px;
+
+  background: rgba(0,0,0,.5);
+  cursor: ew-resize;
+}
+
+.handle:after {  /* Big orange knob  */
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+
+    content:'\21d4';
+    color:white;
+    font-weight:bold;
+    font-size:36px;
+    text-align:center;
+    line-height:64px;
+
+    background: #ffb800; /* @orange */
+    border:1px solid #e6a600; /* darken(@orange, 5%) */
+    border-radius: 50%;
+    transition:all 0.3s ease;
+    box-shadow:
+      0 2px 6px rgba(0,0,0,.3),
+      inset 0 2px 0 rgba(255,255,255,.5),
+      inset 0 60px 50px -30px #ffd466; /* lighten(@orange, 20%)*/
+}
+
+.draggable:after {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    line-height:48px;
+    font-size:30px;
+}
+
+/*Slider*/
+
+/*Accordion*/
+
+.accordion {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+
+
+
+}
+
+.active, .accordion:hover {
+    background-color: #4caf50;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #00000013;
+    overflow: hidden;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/*Accordion*/
+
+.profilename{
+    margin-top: 10px;
+}

@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+</style>
+
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Climbing Skills</title>
+</head>
+<body>
+
+{#menu bar#}
+{#<div class="menu-bar">#}
+<ul>
+    <li><a href="/index">Home</a> </li>
+    <li><a href="/index/profile">Profile</a></li>
+    <li><a href="about.html">About</a></li>
+</ul>
+{#class="active" this goes behind href for the active window#}
+{#</div>#}
+
+
+
+                <h3> #1 </h3>
+
+
+
+
+                <div class="lesson-start">
+                <h2> Try to keep your arms straight when hanging off the climbing wall. <h2/> <br>
+                    Having them bent uses more energy and you'll become tired quickly.   </h2>
+                </div>
+
+
+
+{#Picture container#}
+<div class="w3-content" style="max-width:700px">
+  <img class="mySlides" src="/static/climbingarms.jpg" style="width:100%; padding: 20px; height: 600px; width: auto; margin-left: auto; margin-right: auto">
+  <img class="mySlides" src="/static/climbingarms2.jpg"style="width:100%; padding: 20px; height: 600px; width: auto; margin-left: auto; margin-right: auto">
+  <img class="mySlides" src="/static/climbingarms3.jpg" style="width:100%; padding: 20px; height: 600px; width: auto; margin-left: auto; margin-right: auto">
+</div>
+
+
+
+{#Captions below photos with bootstrap alerts#}
+    <div class="captions">
+    <div class="alert alert-success" style="display: block; font-size: 17px;">
+    <strong>Success!</strong> This is great! Try to keep your arms straight when grabbing a climbing hold
+  </div>
+        </div>
+    <div class="captions">
+    <div class="alert alert-warning" style="display: block; font-size: 17px;">
+    <strong>Hmmmm....</strong> Getting there, but not quite right....
+  </div>
+    </div>
+<div class="captions">
+    <div class="alert alert-danger" style="display: block; font-size: 17px;">
+    <strong>Oh no!</strong> You don't want to do this! Keeping your arms bent uses lots of energy
+  </div>
+</div>
+
+{#Buttons to navigate pictures#}
+<div class="w3-center">
+
+  <buttonsquare class="w3-button demo" onclick="currentDiv(1)">1</buttonsquare>
+  <buttonsquare class="w3-button demo" onclick="currentDiv(2)">2</buttonsquare>
+  <buttonsquare class="w3-button demo" onclick="currentDiv(3)">3</buttonsquare>
+</div>
+
+
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captions = document.getElementsByClassName("captions");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  for (i =0; i < captions.length; i++){
+      captions[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-red";
+  captions[slideIndex-1].style.display="block"
+}
+</script>
+
+
+
+
+<div class="lesson-start">
+
+    <h2> Click the next button to continue!</h2>
+</div>
+
+
+
+                <a href="/index/climbingskills3" class="button">Next!</a>
+
+<div class="progress">
+    <div class="progress-bar" style="width:20%;">20%</div>
+  </div>
+
+
+</body>
+</html>

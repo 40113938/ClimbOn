@@ -1,0 +1,38 @@
+{#<!doctype html>#}
+{#<html>#}
+{#<h2>Sign up</h2>#}
+{##}
+{#  <form action="" method="post">#}
+{##}
+{#  {{ form.csrf_token }}#}
+{##}
+{#    {% for field in form %}#}
+{#      <p>#}
+{#      Test#}
+{#      {{ form.firstname.label }}#}
+{#    {{ form.firstname }}#}
+{#    <br>#}
+{#    {{ form.lastname.label }}#}
+{#    {{ form.lastname }}#}
+{#    <br>#}
+{#    {{ form.email.label }}#}
+{#    {{ form.email }}#}
+{#    <br>#}
+{#    {{ form.password.label }}#}
+{#    {{ form.password }}#}
+{##}
+{#      Test#}
+{#        {{ field.label_tag }}<br>#}
+{#        {{ field }}#}
+{#        {% if field.help_text %}#}
+{#          <small style="color: grey">{{ field.help_text }}</small>#}
+{#        {% endif %}#}
+{#        {% for error in field.errors %}#}
+{#          <p style="color: red">{{ error }}</p>#}
+{#        {% endfor %}#}
+{#      </p>#}
+{#    {% endfor %}#}
+{#    <button type="submit">Sign up</button>#}
+{#  </form>#}
+{##}
+{#</html>#}
